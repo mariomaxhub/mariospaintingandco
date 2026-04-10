@@ -1103,7 +1103,7 @@
       </div>
     </div>
     <div class="reveal">
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" action="https://formspree.io/f/xvzvjkap" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name</label>
@@ -1172,19 +1172,6 @@
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#4a9e6b';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
-  }
 </script>
 </body>
 </html>
